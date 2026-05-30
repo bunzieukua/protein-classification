@@ -1,4 +1,12 @@
-proteins_residues = {"protein5" : residue_5aur}
+proteins_residues = {"protein1" : residue_1dw3,
+                    "protein2" : residue_1ql4,
+                    "protein3" : residue_1ql3,
+                     "protein4" : residue_3zox,
+                     "protein5" : residue_1jkw,
+                     "protein6" : residue_1baw,
+                     "protein7" : residue_5j5t,
+                     "protein8" : residue_1bxv
+                     }
 
 # Define cutoff distance (e.g., 7 Å)
 cutoff = 7.0
@@ -44,7 +52,7 @@ for protein, vector in contact_vectors.items():
 for protein, matrix in contact_maps.items():
     print(f"Contact Map for {protein}:\n", matrix)
 
-#Visualize contact map
+# Visualize contact map
 for protein, contact_map in contact_maps.items():
     plt.imshow(contact_map, cmap='Greys', origin='lower') # Use 'matrix' here
     plt.xlabel("Residue index")
@@ -52,3 +60,4 @@ for protein, contact_map in contact_maps.items():
     plt.title(f"Contact Map for {protein}") # Add protein name to title
     plt.colorbar(label='Contact (1 = black)')
     plt.show()
+
